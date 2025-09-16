@@ -9,7 +9,7 @@ const Packs = () => {
     {
       id: "essentiel",
       title: "Essentiel - Clarté Immédiate",
-      price: "100 000 FCFA / mois",
+      price: "50 000 FCFA / mois",
       features: [
         "Collecte et structuration des données",
         "Dashboard simple 3 KPI",
@@ -22,7 +22,7 @@ const Packs = () => {
     {
       id: "professionnel",
       title: "Professionnel - Performance",
-      price: "300 000 FCFA / mois",
+      price: "150 000 FCFA / mois",
       features: [
         "Analyse approfondie des données",
         "Dashboard interactif léger 10 KPI",
@@ -45,7 +45,7 @@ const Packs = () => {
         "Reporting automatisé hebdomadaire et mensuel",
         "Assistance dédiée"
       ],
-      available: false,
+      available: true,
       recommended: false
     },
     {
@@ -57,9 +57,9 @@ const Packs = () => {
         "Dashboards multi-équipes",
         "Formation complète des managers et cadres",
         "Intégration cloud et systèmes existants",
-        "Veille stratégique & suivi mensuel"
+        "Veille stratégique & suivi hebdomadaire et mensuel"
       ],
-      available: false,
+      available: true,
       recommended: false
     }
   ];
