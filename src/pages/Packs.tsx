@@ -22,7 +22,7 @@ const Packs = () => {
     {
       id: "professionnel",
       title: "Professionnel - Performance",
-      price: "150 000 FCFA / mois",
+      price: "150 000 FCFA / mois (personnalisation sur devis)",
       features: [
         "Analyse approfondie des données",
         "Dashboard interactif léger 10 KPI",
@@ -36,7 +36,7 @@ const Packs = () => {
     {
       id: "premium",
       title: "Premium - Pilotage Stratégique",
-      price: "600 000 FCFA / mois (prévisionnel)",
+      price: "A partir de 300 000 FCFA / mois (prévisionnel)",
       features: [
         "Audit complet des processus internes",
         "Dashboards multi-niveaux",
