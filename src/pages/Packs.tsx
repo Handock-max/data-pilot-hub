@@ -36,7 +36,7 @@ const Packs = () => {
     {
       id: "premium",
       title: "Premium - Pilotage Stratégique",
-      price: "A partir de 300 000 FCFA / mois (prévisionnel)",
+      price: "A partir de 300 000 FCFA / mois (prévisionnel uniquement sur devis)",
       features: [
         "Audit complet des processus internes",
         "Dashboards multi-niveaux",
@@ -45,13 +45,13 @@ const Packs = () => {
         "Reporting automatisé hebdomadaire et mensuel",
         "Assistance dédiée"
       ],
-      available: true,
+      available: false,
       recommended: false
     },
     {
       id: "elites",
       title: "Élites - Sur-Mesure",
-      price: "À partir de 1 000 000 FCFA / mois (sur devis)",
+      price: "À partir de 1 000 000 FCFA / mois (uniquement sur devis)",
       features: [
         "Solutions personnalisées IA et API",
         "Dashboards multi-équipes",
@@ -59,7 +59,7 @@ const Packs = () => {
         "Intégration cloud et systèmes existants",
         "Veille stratégique & suivi hebdomadaire et mensuel"
       ],
-      available: true,
+      available: false,
       recommended: false
     }
   ];
@@ -123,7 +123,9 @@ const Packs = () => {
                       disabled
                     >
                       <Clock className="h-4 w-4 mr-2" />
-                      Bientôt disponible
+                      <Link to="/Contact">
+                      Veuillez nous contacter
+                      </Link>
                     </Button>
                   )}
                 </div>
