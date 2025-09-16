@@ -1,4 +1,4 @@
-## Data Pilot Hub
+## Ash Technologies
 
 Application React + Vite + TypeScript, UI shadcn + Tailwind CSS.
 

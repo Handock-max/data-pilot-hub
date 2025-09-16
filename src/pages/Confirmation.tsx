@@ -65,7 +65,7 @@ const Confirmation = () => {
             <div className="grid sm:grid-cols-2 gap-4 text-sm">
               <div>
                 <p className="text-muted-foreground mb-1">Email :</p>
-                <p className="font-medium">support@datapilothub.com</p>
+                <p className="font-medium">contact@ash-technologies.com</p>
               </div>
               <div>
                 <p className="text-muted-foreground mb-1">WhatsApp :</p>

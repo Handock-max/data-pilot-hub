@@ -48,7 +48,7 @@ const Home = () => {
               <Button asChild size="lg" className="text-lg px-8 py-4">
                 <Link to="/packs">Découvrir nos packs</Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="text-lg px-8 py-4 border-white text-white hover:bg-white hover:text-navy">
+              <Button asChild variant="outline" size="lg" className="text-lg px-8 py-4 border-white text-navy bg-transparent hover:bg-white hover:text-navy">
                 <Link to="/contact">Nous contacter</Link>
               </Button>
             </div>
@@ -61,7 +61,7 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-navy mb-4">
-              Pourquoi choisir Data Pilot Hub ?
+              Pourquoi choisir Ash Technologies ?
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Nous transformons vos données brutes en outils de pilotage stratégique

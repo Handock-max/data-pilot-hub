@@ -49,7 +49,7 @@ const Contact = () => {
     {
       icon: <Mail className="h-6 w-6" />,
       title: "Email",
-      description: "support@datapilothub.com",
+      description: "contact@ash-technologies.com",
       detail: "Réponse sous 24h en moyenne"
     },
     {

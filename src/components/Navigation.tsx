@@ -1,9 +1,19 @@
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { useState, useEffect } from "react";
 
 const Navigation = () => {
   const location = useLocation();
+  const [theme, setTheme] = useState<string>(() => (document.documentElement.classList.contains('dark') ? 'dark' : 'light'));
+
+  useEffect(() => {
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }, [theme]);
 
   const navItems = [
     { label: "Accueil", path: "/" },
@@ -20,7 +30,7 @@ const Navigation = () => {
             <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
               <span className="text-primary-foreground font-bold text-sm">DP</span>
             </div>
-            <span className="text-xl font-bold text-navy">Data Pilot Hub</span>
+            <span className="text-xl font-bold text-navy">Ash Technologies</span>
           </Link>
 
           <div className="hidden md:flex items-center space-x-8">
@@ -41,12 +51,18 @@ const Navigation = () => {
             <Button asChild variant="default" size="sm">
               <Link to="/formulaire">Commencer</Link>
             </Button>
+            <Button variant="outline" size="icon" onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} aria-label="Basculer le thème">
+              {theme === 'dark' ? '🌙' : '☀️'}
+            </Button>
           </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden">
             <Button asChild variant="default" size="sm">
               <Link to="/formulaire">Commencer</Link>
+            </Button>
+            <Button variant="outline" size="icon" className="ml-2" onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} aria-label="Basculer le thème">
+              {theme === 'dark' ? '🌙' : '☀️'}
             </Button>
           </div>
         </div>
