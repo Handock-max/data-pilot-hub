@@ -1,0 +1,38 @@
+=== Sécurisation d’un site statique GitHub Pages avec Supabase ===
+
+1️⃣ Front statique (GitHub Pages)
+- Le site HTML/JS/CSS est public.
+- Utiliser uniquement la clé `anon` côté client pour accéder aux données filtrées par RLS.
+- Ne jamais mettre la clé admin/service_role dans le code client.
+
+2️⃣ Backend sécurisé
+- Créer une API ou Supabase Edge Function qui :
+  1. Reçoit les requêtes du front.
+  2. Utilise la clé admin pour effectuer les opérations sur Supabase.
+  3. Retourne uniquement les données nécessaires au front.
+- La clé admin reste côté serveur, jamais exposée.
+
+3️⃣ Row Level Security (RLS)
+- Activer RLS sur les tables dans Supabase Studio.
+- Créer des policies pour contrôler qui peut lire/écrire quelles données.
+- Exemple : chaque utilisateur ne peut accéder qu’à ses propres données.
+
+4️⃣ Gestion des variables et secrets
+- Utiliser `.env` local pour stocker les clés (clé anon côté front, clé admin côté backend).
+- Ajouter `.env` à `.gitignore` pour ne jamais commiter les secrets.
+- Même `.env` côté front n’empêche pas l’inspection du bundle JS.
+
+5️⃣ Schéma d’architecture
+[GitHub Pages - Front statique] 
+          |
+          v
+[Edge Function / API sécurisée avec clé admin]
+          |
+          v
+       [Supabase DB]
+
+✅ Conclusion
+- Ton site peut fonctionner pleinement avec Supabase.
+- La clé admin n’est jamais exposée.
+- RLS protège les données côté client.
+- Les utilisateurs ne voient que ce qui est autorisé.
