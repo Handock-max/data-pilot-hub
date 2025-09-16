@@ -40,7 +40,20 @@ const Formulaire = () => {
       return;
     }
 
-    // Simulate form submission
+    // TODO Supabase (expliquer) :
+    // 1) Créez une table `demande_services` avec colonnes :
+    //    id (uuid), created_at (timestamp), nom_complet (text), entreprise (text),
+    //    email (text), telephone (text), pack_choisi (text), definition_kpi (text),
+    //    frequence_rapport (text), commentaires (text), consentement (boolean)
+    // 2) Ajoutez SUPABASE_URL et SUPABASE_ANON_KEY dans .env
+    // 3) Exemple d'insertion :
+    // IMPORTANT: Ne pas appeler Supabase tant que vos clés ne sont pas configurées.
+    // Exemple (à activer plus tard):
+    // import { supabase } from '@/lib/supabaseClient'
+    // const { error } = await supabase.from('demande_services').insert([formData])
+    // if (error) { toast({ title: 'Erreur', description: error.message, variant: 'destructive' }); return }
+
+    // Simulation en attendant Supabase
     toast({
       title: "Demande envoyée !",
       description: "Votre demande a été transmise avec succès. Nous vous contacterons sous 48h.",
@@ -150,6 +163,7 @@ const Formulaire = () => {
                   <p className="text-sm text-muted-foreground mb-2">
                     Téléversez vos fichiers (Excel, CSV)
                   </p>
+                  {/* TODO: Intégrer un input type="file" ou un uploader (puis stockage Supabase Storage) */}
                   <Button type="button" variant="outline" size="sm">
                     <FileText className="h-4 w-4 mr-2" />
                     Choisir les fichiers

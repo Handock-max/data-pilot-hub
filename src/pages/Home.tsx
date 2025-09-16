@@ -30,6 +30,8 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
+      {/* Remplacez l'arrière-plan de la section par une image si souhaité */}
+      {/* Exemple: ajoutez une classe CSS avec background-image: url('/public/hero.jpg') */}
       <section className="relative bg-gradient-hero text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-24">
           <div className="text-center">

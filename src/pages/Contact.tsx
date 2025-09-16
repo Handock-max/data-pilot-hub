@@ -17,8 +17,21 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
-    // Simulate form submission
+
+    // TODO Supabase (expliquer) :
+    // 1) Créez un projet sur Supabase et un schéma/table `contacts` avec colonnes:
+    //    id (uuid, pk, default uuid_generate_v4), created_at (timestamp, default now()),
+    //    nom (text), email (text), message (text)
+    // 2) Ajoutez SUPABASE_URL et SUPABASE_ANON_KEY dans .env
+    // 3) Dé-commentez et utilisez l'exemple ci-dessous:
+    // IMPORTANT: Ne pas appeler Supabase tant que vos clés ne sont pas configurées,
+    // cela empêcherait toute erreur en production sur GitHub Pages.
+    // Exemple (à activer plus tard):
+    // import { supabase } from '@/lib/supabaseClient'
+    // const { error } = await supabase.from('contacts').insert({ nom: formData.nom, email: formData.email, message: formData.message })
+    // if (error) { toast({ title: 'Erreur', description: error.message, variant: 'destructive' }); return }
+
+    // Simulation en attendant Supabase
     toast({
       title: "Message envoyé !",
       description: "Votre message a été envoyé. Nous vous répondrons rapidement.",
