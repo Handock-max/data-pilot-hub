@@ -117,13 +117,18 @@ const Packs = () => {
                       </Link>
                     </Button>
                   ) : (
-                    <Button 
+                    
+                    
+                    /*<Button 
                       variant="outline" 
                       className="w-full" 
                       disabled
                     >
                       <Clock className="h-4 w-4 mr-2" />
-                      <Link to="/Contact">
+                      <Link to="/Contact">/** */
+
+                    <Button asChild className="w-full" variant={pack.recommended ? "default" : "outline"}>
+                      <Link to="/contact">
                       Veuillez nous contacter
                       </Link>
                     </Button>
@@ -159,5 +164,7 @@ const Packs = () => {
     </div>
   );
 };
+
+
 
 export default Packs;
