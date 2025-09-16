@@ -7,12 +7,12 @@ const Pricing = () => {
   const pricingData = [
     {
       pack: "Essentiel",
-      cible: "PME, commerces",
+      cible: "PME, commerces, associations, collectivités, particuliers",
       kpi: "3 KPI principaux",
       dashboards: "Dashboard simple",
       rapports: "Export PDF / Excel, 1 mise à jour mensuelle",
       support: "Email, réponse 48h",
-      prix: "100 000 FCFA / mois",
+      prix: "50 000 FCFA / mois (personnalisation sur devis)",
       disponibilite: "Disponible",
       available: true
     },
@@ -23,7 +23,7 @@ const Pricing = () => {
       dashboards: "Dashboard interactif léger",
       rapports: "Rapports hebdomadaires automatisés, Export PDF/Excel/PPT",
       support: "Email + WhatsApp, réponse 24h",
-      prix: "300 000 FCFA / mois",
+      prix: "150 000 FCFA / mois (personnalisation sur devis)",
       disponibilite: "Disponible",
       available: true
     },
@@ -34,7 +34,7 @@ const Pricing = () => {
       dashboards: "Multi-niveaux, prévisions et modélisation",
       rapports: "Rapports automatisés hebdomadaires et mensuels",
       support: "Assistance dédiée, hotline / WhatsApp / email",
-      prix: "600 000 FCFA / mois (prévisionnel)",
+      prix: "300 000 FCFA / mois (prévisionnel)",
       disponibilite: "Bientôt disponible",
       available: false
     },
